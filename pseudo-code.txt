@@ -1,0 +1,79 @@
+Int humanScore equals 0, computerScore equals 0;
+String user equals getHumanChoice();
+String computer equals getComputerChoice();
+
+Function getComputerChoice{
+    string computerChocie;
+    int random = math.random() *  10 + 1;
+    do {
+        if random equals 1{
+            computerChocie equals `rock`;
+        } else if random equals 2{
+            computerChocie equals `paper`;
+        } else if random equals 3{
+            computerChocie equals `scissors`
+        }
+    }while(random is greater than two);
+    
+    return computerChocie;
+}
+
+Create function getHumanChoice{
+    String humanChoice equals promtp for 'rock' 'paper' or 'scissors';
+    Return humanChoice;
+}
+
+Create function round(user, computer){
+    If user is rock then
+        If computer is paper then  
+            computer wins
+            break
+        If computer is scissors then
+            user wins
+            break
+        If computer is rock then
+            is a tie
+            break
+    Else if user is paper
+        If computer is scissors then  
+            computer wins
+            break
+        If computer is paper then  
+            is a tie
+            break
+        If computer is rock then  
+            user wins
+            break
+    Else if user is scissors then
+        If computer is scissors then 
+            is a tie
+            break
+        If computer is rock then
+            computer wins
+            break
+        If computer is paper then
+            user wins
+            break
+
+}
+
+}
+
+Create function playGame
+    Int i equals 0
+    Int round equals 0
+    Loop while round is less than 5 and computerScore is less than 3 or humanScore is less than 3
+        String humanChoice calls function getHumanChoice
+        String computerChocie calls function getComputerChoice
+        Int i calls function playRound
+        If i is true then
+            Print 'User won this round!'
+        else
+            Print 'Computer won this round!'
+        round++
+    Print finalScore
+    If humanScore is higher than computerScore then
+        Print 'Congratulations!! You won the game.'
+    Else
+        Print 'You Lose!! Better luck next time'
+
